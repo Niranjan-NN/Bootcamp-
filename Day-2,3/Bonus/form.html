@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1ABC9C;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+        <div>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+        </div>
+        <div>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <div id="emailError" class="error"></div>
+        </div>
+        <div>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <div id="passwordError" class="error"></div>
+        </div>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        // Clear previous error messages
+        document.getElementById("emailError").textContent = "";
+        document.getElementById("passwordError").textContent = "";
+        
+        let valid = true;
+
+        // Validate email format
+        const email = document.getElementById("email").value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email.match(emailPattern)) {
+            valid = false;
+            document.getElementById("emailError").textContent = "Please enter a valid email address.";
+        }
+
+        // Validate password length
+        const password = document.getElementById("password").value;
+        if (password.length < 6) {
+            valid = false;
+            document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+        }
+
+        // If all validations pass, alert the user
+        if (valid) {
+            alert("Registration successful!");
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #8f94fb, #4e54c8);
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      color: #ffd700;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border: none;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #3d42a6, #7579e7);
+    }
+
+    /* About Content */
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      gap: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #4e54c8;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html"><strong>360's Hotel</strong></a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Food Menu</a></li>
+      <li><a href="book.html">Book Table</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="hero-content">
+      <h1>About <span class="highlight">Us</span></h1>
+      <p>Learn more about our journey, mission, and passion for delicious and healthy food.</p>
+      <a href="book.html" class="btn">Book Your Table</a>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>At <strong>360's Hotel Restaurant</strong>, we believe that food is more than just sustenance—it's an experience. Founded with the vision of bringing delicious and healthy meals to the community, we source the freshest ingredients and craft dishes that satisfy both the taste buds and the soul.</p>
+      <p>Whether you're looking for a cozy place to dine with family or a quick lunch break option, we've got something for everyone. Our commitment is to provide exceptional service, mouth-watering food, and a warm, welcoming atmosphere.</p>
+    </div>
+    <div class="about-image">
+      <img src="hotel.jpg" alt="Restaurant Interior">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 360's Hotel Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
