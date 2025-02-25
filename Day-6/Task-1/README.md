@@ -1,5 +1,3 @@
----
-
 ## 1️⃣ **Hello World API**
 
 ### 📝 Overview  
@@ -29,5 +27,3 @@ Create a simple Express.js server that returns a JSON response:
    node server.js
    ```
 5. Visit `http://localhost:3000` to see the JSON response.
-
----
